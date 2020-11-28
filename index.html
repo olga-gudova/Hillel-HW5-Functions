@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+
+        function padString (name = 'Ivan', number = 5, symbol = '*', isStart = false) {
+            var added = '';
+            var string;
+
+            for (let i = 0; i < (number-name.length); i++) {
+                added += symbol[0];
+            }
+            
+            if (name.length >= number) {
+                string = name;
+            } else {
+                isStart ? string = added + name : string = name + added
+            }
+            return string;
+        }
+        
+        console.log(padString('Ol', 8, 'love', 1));
+     
+    </script>
+</body>
+</html>
